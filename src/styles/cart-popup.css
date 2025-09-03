@@ -1,0 +1,220 @@
+/* src/styles/cart-popup.css */
+
+/* Container bên trong Popup */
+.cart-popup-inner {
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+/* Căn giữa text (loading, lỗi) */
+.cp-text-center {
+    text-align: center;
+    padding: 20px 0;
+}
+.cp-error {
+    color: #e74c3c;
+}
+
+/* ===== Bảng cart ===== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+.cart-table th,
+.cart-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+.cart-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+.cell-image .thumb-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.cell-quantity,
+.cell-price,
+.cell-total,
+.cell-action {
+    text-align: center;
+}
+.btn-remove-item {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn-remove-item:hover {
+    color: #c0392b;
+}
+/* Nếu không có ảnh */
+.no-image {
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border-radius: 4px;
+}
+
+/* ===== Tổng quan ===== */
+.cart-popup-inner p {
+    margin: 16px 0;
+}
+/* src/styles/cart-popup.css */
+
+/* Toàn bộ container bên trong Popup */
+.cart-popup-inner {
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+/* Căn giữa text loading / lỗi */
+.cp-text-center {
+    text-align: center;
+    padding: 20px 0;
+}
+.cp-error {
+    color: #e74c3c;
+}
+
+/* ===== Bảng chi tiết giỏ hàng ===== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+.cart-table th,
+.cart-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+.cart-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+.cell-image .thumb-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.cell-sku {
+    font-family: monospace;
+    color: #555;
+    font-size: 0.9rem;
+}
+.cell-name {
+    font-size: 0.95rem;
+    color: #333;
+}
+.cell-price,
+.cell-quantity,
+.cell-total,
+.cell-action {
+    text-align: center;
+}
+.qty-btn {
+    background: none;
+    border: 1px solid #ccc;
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 4px;
+    user-select: none;
+}
+.qty-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.qty-value {
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.btn-remove-item {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn-remove-item:hover {
+    color: #c0392b;
+}
+
+/* ===== Nút Xóa toàn bộ giỏ hàng ===== */
+.clear-cart-container {
+    text-align: right;
+    margin-bottom: 16px;
+}
+.btn-clear-cart {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-clear-cart:hover {
+    background-color: #c0392b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .cart-table th,
+    .cart-table td {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+    .cell-image .thumb-image {
+        width: 50px;
+        height: 50px;
+    }
+    .qty-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+    .qty-value {
+        width: 24px;
+        font-size: 0.85rem;
+    }
+}
+/* src/styles/cart-popup.css */
+
+/* Phần hiển thị voucher đã áp dụng */
+.applied-voucher-info {
+    background-color: #f6f9fc;
+    border: 1px solid #cce5ff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+.applied-voucher-info strong {
+    font-weight: 600;
+}
+.applied-voucher-info span {
+    color: #e74c3c;
+}

@@ -1,0 +1,754 @@
+/* Namespace tất cả styles cho showcase page với tiền tố atino-showcase- */
+.atino-showcase-page * {
+    box-sizing: border-box;
+}
+
+/* Container chính */
+.atino-showcase-page {
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Loading và Error states */
+.atino-showcase-page .atino-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.atino-showcase-page .atino-loading-text {
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+.atino-showcase-page .atino-error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.atino-showcase-page .atino-error-text {
+    color: #ef4444;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.atino-showcase-page .atino-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 900px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.atino-showcase-page .atino-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.atino-showcase-page .atino-hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.atino-showcase-page .atino-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.atino-showcase-page .atino-hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.1) 70%,
+            rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: 2;
+}
+
+.atino-showcase-page .atino-hero-content-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.atino-showcase-page .atino-hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.atino-showcase-page .atino-hero-text-block {
+    max-width: 600px;
+    color: white;
+}
+
+.atino-showcase-page .atino-hero-title {
+    font-size: 4.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.atino-showcase-page .atino-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+}
+
+/* Product Sections */
+.atino-showcase-page .atino-product-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.atino-showcase-page .atino-section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.atino-showcase-page .atino-section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.atino-showcase-page .atino-section-title {
+    font-size: 2.75rem;
+    font-weight: 200;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.atino-showcase-page .atino-section-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.atino-showcase-page .atino-section-footer {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.atino-showcase-page .atino-view-all-btn {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 1.25rem 3rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.atino-showcase-page .atino-view-all-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.atino-showcase-page .atino-view-all-btn:active {
+    transform: translateY(0);
+}
+
+/* Product grid section */
+.atino-showcase-page .atino-product-grid-section {
+    width: 100%;
+}
+
+.atino-showcase-page .atino-grid-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.atino-showcase-page .atino-grid-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.atino-showcase-page .atino-grid-subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Grid layout - 4 columns */
+.atino-showcase-page .atino-products-grid {
+    display: grid;
+    gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.atino-showcase-page .atino-products-grid-4-cols {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .atino-showcase-page .atino-products-grid-4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .atino-showcase-page .atino-products-grid-4-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .atino-showcase-page .atino-products-grid-4-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.atino-showcase-page .atino-product-grid-item {
+    display: block;
+}
+
+/* Product card */
+.atino-showcase-page .atino-product-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.atino-showcase-page .atino-product-card:hover {
+    transform: translateY(-4px);
+}
+
+/* New badge */
+.atino-showcase-page .atino-new-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    z-index: 2;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Wishlist button */
+.atino-showcase-page .atino-wishlist-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.atino-showcase-page .atino-product-card:hover .atino-wishlist-button {
+    opacity: 1;
+}
+
+.atino-showcase-page .atino-wishlist-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.atino-showcase-page .atino-wishlist-button:hover .atino-wishlist-icon {
+    stroke: #ffffff;
+}
+
+.atino-showcase-page .atino-wishlist-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: #000000;
+    fill: none;
+    stroke-width: 2;
+}
+
+/* Quick view overlay */
+.atino-showcase-page .atino-quick-view-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.atino-showcase-page .atino-product-card:hover .atino-quick-view-overlay {
+    opacity: 1;
+}
+
+.atino-showcase-page .atino-quick-view-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.atino-showcase-page .atino-quick-view-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Product image container */
+.atino-showcase-page .atino-product-image-container {
+    position: relative;
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background-color: #f9fafb;
+    border-radius: 8px;
+}
+
+.atino-showcase-page .atino-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.atino-showcase-page .atino-product-card:hover .atino-product-image {
+    transform: scale(1.05);
+}
+
+/* Product info */
+.atino-showcase-page .atino-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.atino-showcase-page .atino-product-name {
+    font-weight: 400;
+    color: #111827;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.atino-showcase-page .atino-product-card:hover .atino-product-name {
+    color: #6b7280;
+}
+
+.atino-showcase-page .atino-product-price {
+    color: #111827;
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Screen reader only */
+.atino-showcase-page .atino-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Lifestyle Sections */
+.atino-showcase-page .atino-lifestyle-section {
+    padding: 6rem 0;
+    background-color: #f8f9fa;
+}
+
+.atino-showcase-page .atino-lifestyle-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.atino-showcase-page .atino-lifestyle-image-container {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.atino-showcase-page .atino-lifestyle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.atino-showcase-page .atino-lifestyle-image-container:hover .atino-lifestyle-image {
+    transform: scale(1.05);
+}
+
+.atino-showcase-page .atino-lifestyle-text {
+    padding: 2rem 0;
+}
+
+.atino-showcase-page .atino-lifestyle-title {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: #111827;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.atino-showcase-page .atino-lifestyle-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+.atino-showcase-page .atino-lifestyle-cta {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 8px;
+}
+
+.atino-showcase-page .atino-lifestyle-cta:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Full Width Lifestyle Section */
+.atino-showcase-page .atino-full-width-lifestyle {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.atino-showcase-page .atino-full-width-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.atino-showcase-page .atino-full-width-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.atino-showcase-page .atino-full-width-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atino-showcase-page .atino-full-width-content {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    padding: 0 3rem;
+}
+
+.atino-showcase-page .atino-full-width-title {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.atino-showcase-page .atino-full-width-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.atino-showcase-page .atino-full-width-cta {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 8px;
+}
+
+.atino-showcase-page .atino-full-width-cta:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Filter bar (mobile) */
+.atino-showcase-page .atino-filter-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem;
+    display: none;
+    z-index: 100;
+}
+
+@media (max-width: 1023px) {
+    .atino-showcase-page .atino-filter-bar {
+        display: block;
+    }
+}
+
+.atino-showcase-page .atino-filter-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.atino-showcase-page .atino-filter-button {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background-color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.atino-showcase-page .atino-filter-button:hover {
+    border-color: #000000;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .atino-showcase-page .atino-hero-content {
+        padding: 0 2rem;
+    }
+
+    .atino-showcase-page .atino-section-container {
+        padding: 0 2rem;
+    }
+
+    .atino-showcase-page .atino-lifestyle-content {
+        padding: 0 2rem;
+    }
+
+    .atino-showcase-page .atino-full-width-content {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .atino-showcase-page .atino-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .atino-showcase-page .atino-section-title {
+        font-size: 2.25rem;
+    }
+
+    .atino-showcase-page .atino-lifestyle-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .atino-showcase-page .atino-lifestyle-title {
+        font-size: 2rem;
+    }
+
+    .atino-showcase-page .atino-full-width-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .atino-showcase-page .atino-hero-section {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .atino-showcase-page .atino-hero-content {
+        padding: 0 1.5rem;
+    }
+
+    .atino-showcase-page .atino-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .atino-showcase-page .atino-hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .atino-showcase-page .atino-section-container {
+        padding: 0 1.5rem;
+    }
+
+    .atino-showcase-page .atino-section-title {
+        font-size: 1.875rem;
+    }
+
+    .atino-showcase-page .atino-lifestyle-content {
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+
+    .atino-showcase-page .atino-lifestyle-title {
+        font-size: 1.75rem;
+    }
+
+    .atino-showcase-page .atino-full-width-title {
+        font-size: 2rem;
+    }
+
+    .atino-showcase-page .atino-full-width-content {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .atino-showcase-page .atino-product-section {
+        padding: 4rem 0;
+    }
+
+    .atino-showcase-page .atino-lifestyle-section {
+        padding: 4rem 0;
+    }
+
+    .atino-showcase-page .atino-hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .atino-showcase-page .atino-full-width-lifestyle {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .atino-showcase-page .atino-products-grid {
+        gap: 1.5rem;
+    }
+
+    .atino-showcase-page .atino-product-section {
+        padding: 3rem 0 5rem;
+    }
+}
+
+/* Hover effects for touch devices */
+@media (hover: none) {
+    .atino-showcase-page .atino-product-card:hover {
+        transform: none;
+    }
+
+    .atino-showcase-page .atino-product-card:hover .atino-product-image {
+        transform: none;
+    }
+
+    .atino-showcase-page .atino-wishlist-button {
+        opacity: 1;
+    }
+
+    .atino-showcase-page .atino-quick-view-overlay {
+        opacity: 0;
+    }
+}
+
+/* Thêm style cho thông báo hiển thị tất cả sản phẩm */
+.atino-showcase-page .atino-all-products-shown {
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-style: italic;
+    margin: 0;
+    padding: 1rem 0;
+}

@@ -1,0 +1,698 @@
+/* Sử dụng tiền tố atino-order- cho tất cả các class để tránh xung đột */
+.atino-order-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.atino-order-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.atino-order-header h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.atino-order-header p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Tabs for filtering */
+.atino-order-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.atino-order-tab {
+    padding: 8px 16px;
+    background-color: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.atino-order-tab:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.atino-order-tab-active {
+    background-color: #f0e6d2;
+    border-color: #e6d7c3;
+    color: #8a6d3b;
+    font-weight: 500;
+}
+
+/* Loading Spinner */
+.atino-order-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.atino-order-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #8a6d3b;
+    border-radius: 50%;
+    animation: atino-order-spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes atino-order-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error Message */
+.atino-order-error {
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    color: #333;
+    margin: 30px 0;
+}
+
+.atino-order-error h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.atino-order-retry-btn {
+    background-color: #8a6d3b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* Login Required */
+.atino-order-login-required {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.atino-order-login-required h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.atino-order-login-required p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.atino-order-login-btn {
+    background-color: #8a6d3b;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.atino-order-login-btn:hover {
+    background-color: #7a5d2b;
+}
+
+/* Empty Orders */
+.atino-order-empty {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.atino-order-empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: #999;
+}
+
+.atino-order-empty h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.atino-order-empty p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.atino-order-shop-btn {
+    background-color: #8a6d3b;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.atino-order-shop-btn:hover {
+    background-color: #7a5d2b;
+}
+
+/* Orders Grid */
+.atino-order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Order Card */
+.atino-order-card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 20px;
+    transition: box-shadow 0.2s ease;
+}
+
+.atino-order-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Order Card Header */
+.atino-order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.atino-order-id {
+    font-size: 1rem;
+    color: #333;
+}
+
+.atino-order-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.atino-order-status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.atino-order-status-confirmed {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.atino-order-status-shipping {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.atino-order-status-delivered {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+}
+
+.atino-order-status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.atino-order-status-unknown {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+/* Order Card Details */
+.atino-order-card-details {
+    margin-bottom: 16px;
+}
+
+.atino-order-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 2px 0;
+}
+
+.atino-order-detail-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.atino-order-detail-value {
+    color: #333;
+    font-weight: 500;
+}
+
+.atino-order-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8a6d3b;
+}
+
+.atino-order-voucher {
+    font-size: 0.85rem;
+    color: #28a745;
+}
+
+/* Order Address */
+.atino-order-address {
+    margin-bottom: 16px;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 3px solid #e6d7c3;
+}
+
+.atino-order-address h4 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.atino-order-address-content {
+    font-size: 0.9rem;
+}
+
+.atino-order-address-content p {
+    margin: 4px 0;
+}
+
+.atino-order-address-name {
+    font-weight: 500;
+}
+
+.atino-order-address-phone {
+    color: #666;
+}
+
+.atino-order-address-full {
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Order Items */
+.atino-order-items-container {
+    margin-bottom: 16px;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.atino-order-items-container h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.atino-order-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.atino-order-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.atino-order-item-row:last-child {
+    border-bottom: none;
+}
+
+.atino-order-item-sku {
+    color: #666;
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.atino-order-item-quantity {
+    color: #333;
+    font-weight: 500;
+    margin: 0 10px;
+    font-size: 0.85rem;
+}
+
+.atino-order-item-price {
+    color: #8a6d3b;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.atino-order-more-items {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.85rem;
+}
+
+/* Order Card Actions */
+.atino-order-card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.atino-order-view-btn {
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    padding: 2px 11px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.atino-order-view-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.atino-order-cancel-btn {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 0px 0px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.atino-order-cancel-btn:hover {
+    background-color: #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .atino-order-container {
+        padding: 15px;
+    }
+
+    .atino-order-tabs {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .atino-order-tab {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .atino-order-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .atino-order-card {
+        padding: 16px;
+    }
+
+    .atino-order-card-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .atino-order-view-btn,
+    .atino-order-cancel-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .atino-order-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .atino-order-container {
+        padding: 10px;
+    }
+
+    .atino-order-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .atino-order-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .atino-order-header p {
+        font-size: 0.9rem;
+    }
+}
+/* Thêm vào cuối file OrderListPage.css của bạn */
+
+/* --- Toast Message Styles --- */
+.toast-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Đảm bảo toast hiện lên trên các phần tử khác */
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeInOut 3s forwards; /* Animation tổng thể */
+}
+
+/* Colors for different toast types */
+.toast-success {
+    background-color: #d4edda; /* Màu xanh lá cây nhạt */
+    color: #155724; /* Màu chữ xanh đậm */
+    border: 1px solid #c3e6cb;
+}
+
+.toast-error {
+    background-color: #f8d7da; /* Màu đỏ nhạt */
+    color: #721c24; /* Màu chữ đỏ đậm */
+    border: 1px solid #f5c6cb;
+}
+
+.toast-info {
+    background-color: #e2e3e5; /* Màu xám nhạt */
+    color: #383d41; /* Màu chữ xám đậm */
+    border: 1px solid #d6d8db;
+}
+
+.toast-message p {
+    margin: 0;
+    padding-right: 15px; /* Khoảng cách giữa text và nút đóng */
+}
+
+.toast-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: inherit; /* Kế thừa màu chữ từ toast */
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.toast-close-btn:hover {
+    opacity: 0.7;
+}
+
+/* Keyframe for fade in and fade out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Bắt đầu hơi cao hơn */
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Hiện lên */
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40%); /* Trượt xuống khi biến mất */
+    }
+}
+/* Sử dụng tiền tố atino-order- cho tất cả các class để tránh xung đột /
+.atino-order-container { ... }
+/ (giữ nguyên phần CSS hiện tại của bạn) */
+
+/* --- SelectAddressPopup Styles (riêng biệt, không đè các form khác) --- */
+.select-address-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10000;
+}
+
+.select-address-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 12px;
+    width: 90%; max-width: 400px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 10001;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.select-address-modal h2 {
+    margin: 0 0 16px;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #333;
+}
+
+.select-address-modal .address-list {
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.select-address-modal .address-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.select-address-modal .address-item input[type="radio"] {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.select-address-modal .address-info p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.select-address-modal .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.select-address-modal .btn-cancel,
+.select-address-modal .btn-add {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    outline: none;
+}
+
+.select-address-modal .btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.select-address-modal .btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.select-address-modal .btn-add {
+    background-color: #8a6d3b;
+    color: #fff;
+}
+
+.select-address-modal .btn-add:hover {
+    background-color: #7a5d2b;
+}
+
+/* --- Thay đổi Địa Chỉ Button riêng biệt --- */
+.atino-order-card .change-address-btn {
+    background-color: #ffeb3b;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.atino-order-card .change-address-btn:hover {
+    background-color: #fdd835;
+}
+

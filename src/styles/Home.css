@@ -1,0 +1,261 @@
+/* src/styles/Home.css */
+
+/* Reset cơ bản & container */
+.atino, .atino * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;        /* hoặc 100vh nếu muốn phủ full */
+    overflow: hidden;
+    margin-top: 0;       /* Đảm bảo không có margin top */
+}
+
+/* Video nền */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Bật controls (play/pause, bật/tắt âm thanh) */
+.hero-video {
+    controls: true;
+}
+
+/* Lớp phủ mờ tối */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+/* Nội dung trên video */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 16px;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+.hero-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Category Section */
+.products {
+    padding: 60px 0;
+}
+.category-block {
+    margin-bottom: 60px;
+}
+.category-block h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.category-tabs {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.category-tabs li {
+    cursor: pointer;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
+.category-tabs li:hover,
+.category-tabs .active {
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-weight: 600;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 24px;
+}
+.product-card {
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+}
+.product-info {
+    margin-top: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+.product-info .brand {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+.product-info .name {
+    display: block;
+    margin: 4px 0;
+    font-size: 16px;
+}
+.product-info .price {
+    font-weight: 700;
+}
+
+/* Footer Section */
+.atino-footer {
+    background: #f5f5f5;
+    padding: 40px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.atino-footer .col {
+    flex: 1 1 200px;
+}
+.atino-footer h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.atino-footer ul {
+    list-style: none;
+}
+.atino-footer li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.atino-footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+/* Nút điều khiển video */
+.video-controls {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 4;
+    display: flex;
+    gap: 12px;
+}
+
+.ctrl-btn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ctrl-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+/* Hiển thị section showcase ngay dưới video */
+.showcase-section {
+    padding: 60px 0;
+    text-align: center;
+}
+.showcase-title {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 24px;
+}
+.showcase-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+.showcase-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+.showcase-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.showcase-item:hover img {
+    transform: scale(1.05);
+}
+.showcase-label {
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    background: none;
+    color: #333;
+}
+
+.promo-section .hero-video,
+.promo-section .hero-video:hover {
+    cursor: pointer;
+}
+.promo-wrapper,
+.promo-section .promo-wrapper,
+.promo-section .hero-overlay {
+    cursor: pointer;
+}
+

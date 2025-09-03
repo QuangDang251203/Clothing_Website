@@ -1,0 +1,72 @@
+
+.category-list-container {
+    padding: 2rem;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+}
+.category-list-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+.table {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.table thead {
+    background-color: #0d6efd;
+    color: #fff;
+}
+.table td, .table th {
+    text-align: center;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+}
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-actions {
+    margin-top: 1rem;
+}
+/* Đặt table layout cố định và 100% width */
+.table {
+    width: 100%;
+    table-layout: fixed; /* Khóa độ rộng cột */
+}
+
+/* Chia đều độ rộng các cột, bạn có thể điều chỉnh %
+   nếu muốn cột nào rộng hơn hoặc hẹp hơn */
+.table thead th {
+    /* Ví dụ: bốn cột đều nhau */
+    width: 25%;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+/* Cho input chiếm hết ô */
+.table tbody td input.form-control {
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn */
+}
+
+/* Giữ nút không làm giãn cột */
+.table tbody td .btn {
+    white-space: nowrap;  /* Không xuống dòng */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Nếu bạn có một hàng thêm mới (class table-warning) */
+.table tbody tr.table-warning td {
+    background-color: #fff8e1; /* màu nền nhẹ cho dễ phân biệt */
+}
+
+/* Đảm bảo scroll ngang nếu nội dung quá rộng */
+.category-list-container {
+    overflow-x: auto;
+}

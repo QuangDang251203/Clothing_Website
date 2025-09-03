@@ -1,0 +1,41 @@
+/* src/styles/cart-summary.css */
+
+.cart-summary-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Đẩy cả hai về sát bên phải */
+    /* Thêm khoảng cách cố định giữa Tổng cộng và nút Mua Hàng */
+    gap: 16px; /* hoặc 12px, tùy bạn muốn rộng/chéo */
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.summary-line {
+    display: flex;
+    align-items: baseline;
+}
+
+/* Giữ nguyên các style cũ của summary-label, summary-value, btn-buy-now */
+.summary-label {
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+.summary-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e74c3c;
+}
+.btn-buy-now {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-buy-now:hover {
+    background-color: #c0392b;
+}
