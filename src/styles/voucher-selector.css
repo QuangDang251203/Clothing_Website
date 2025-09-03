@@ -1,0 +1,32 @@
+/* src/styles/voucher-selector.css */
+
+.voucher-select-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;       /* Khoảng cách nhỏ hơn để chữ và nút sát nhau */
+    margin: 8px 0;  /* Hoặc margin: 0; nếu bạn muốn không có khoảng trống */
+}
+
+.voucher-icon {
+    font-size: 1.2rem;
+}
+
+.voucher-label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #e74c3c;
+}
+
+.voucher-open-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #0095f8;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.voucher-open-btn:hover {
+    color: #007bbd;
+}

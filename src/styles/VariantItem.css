@@ -1,0 +1,139 @@
+.variant-row {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.variant-row:hover {
+    background-color: rgba(249, 250, 251, 0.8);
+    transform: translateY(-1px);
+}
+
+.variant-cell {
+    padding: 16px 24px;
+    vertical-align: middle;
+    border: none;
+}
+
+.sku-code {
+    font-weight: 600;
+    color: #111827;
+    font-size: 14px;
+}
+
+.variant-size {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.color-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    flex-shrink: 0;
+}
+
+.color-text {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.variant-price {
+    font-weight: 600;
+    color: #111827;
+    font-size: 14px;
+}
+
+.variant-cost {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.quantity-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-number {
+    font-weight: 600;
+    color: #111827;
+    font-size: 14px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-danger {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-warning {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.badge-success {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-import {
+    background-color: #10b981;
+    color: white;
+}
+
+.btn-import:hover {
+    background-color: #059669;
+}
+
+.btn-history {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-history:hover {
+    background-color: #2563eb;
+}
+
+.btn-icon {
+    font-size: 14px;
+}

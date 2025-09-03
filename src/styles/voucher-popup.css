@@ -1,0 +1,197 @@
+/* src/styles/voucher-popup.css */
+
+.voucher-popup-inner {
+    width: 100%;
+    max-height: 80vh; /* Giới hạn chiều cao popup */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Input Mã Voucher --- */
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.input-section input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+.btn-apply-code {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-apply-code:hover {
+    background-color: #c0392b;
+}
+.apply-error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+/* --- Danh sách Voucher --- */
+.list-section {
+    flex: 1;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.vp-loading,
+.vp-error,
+.vp-empty {
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.vp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.vp-item {
+    margin-bottom: 12px;
+}
+.vp-item-label {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+.vp-card {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    align-items: center;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.vp-card-left {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: center;
+}
+.vp-free-shipping {
+    background-color: #ff6f61;
+    color: white;
+    padding: 8px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    line-height: 1.1;
+}
+.vp-discount {
+    background-color: #ff9f1a;
+    color: white;
+    padding: 8px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    line-height: 1.1;
+}
+.vp-card-right {
+    flex: 1;
+    padding-left: 12px;
+}
+.vp-desc {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+.vp-conditions {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 4px;
+}
+.vp-expiry {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+.vp-progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.vp-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.vp-progress-fill {
+    height: 100%;
+    background-color: #e74c3c;
+}
+.vp-used-count {
+    font-size: 0.75rem;
+    color: #666;
+}
+.vp-radio {
+    margin-left: 12px;
+    transform: scale(1.2);
+}
+
+/* --- Footer: Trở Lại & OK --- */
+.vp-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 12px;
+}
+.btn-back,
+.btn-ok {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+.btn-back {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.btn-back:hover {
+    background-color: #e0e0e0;
+}
+.btn-ok {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn-ok:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive: khi hẹp màn, làm gọn lại */
+@media (max-width: 600px) {
+    .vp-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .vp-card-left {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .vp-radio {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%) scale(1.2);
+    }
+}

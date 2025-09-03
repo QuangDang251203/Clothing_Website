@@ -1,0 +1,116 @@
+/* ====================== */
+/* File: src/styles/popup.css */
+/* ====================== */
+
+/* Overlay che toàn màn hình */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Mặc định trong suốt */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Overlay khi mở: background mờ */
+.popup-overlay-open {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Container popup chính - FIXED POSITIONING */
+.popup-container {
+    position: fixed;
+    top: 0;
+    right: 0; /* Đặt cố định ở bên phải */
+    width: 50vw; /* 50% viewport width */
+    height: 100vh; /* Chiều cao full viewport */
+    background: #ffffff; /* Nền trắng */
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+
+    /* Ban đầu đặt ngoài màn hình bên phải */
+    transform: translateX(100%);
+    /* Transition mượt cho transform */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Khi active (isAnimating = true), trượt vào */
+.popup-slide-in {
+    transform: translateX(0);
+}
+
+/* Khi đóng (isAnimating = false), trượt ra bên phải */
+.popup-slide-out {
+    transform: translateX(100%);
+}
+
+/* Header của popup */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.popup-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+}
+
+/* Nút đóng (icon X) */
+.popup-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #666666;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: color 0.2s ease;
+}
+
+.popup-close-btn:hover {
+    color: #333333;
+}
+
+/* Nội dung popup (chứa form con) */
+.popup-content {
+    flex: 1;
+    padding: 20px 24px;
+    overflow-y: auto;
+}
+
+/* Scrollbar styling cho popup-content */
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #f8f8f8;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 3px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+}
+
+/* Responsive: khi màn hình nhỏ hơn 768px, popup chiếm toàn bộ chiều ngang */
+@media (max-width: 768px) {
+    .popup-container {
+        width: 100vw;
+        right: 0;
+    }
+}

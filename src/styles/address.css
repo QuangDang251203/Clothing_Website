@@ -1,0 +1,375 @@
+/* Address Popup Styles */
+.address-popup {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.loading-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.error-message {
+    background: #f5f5f5;
+    color: #000;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.address-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.address-form h4 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group select:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.loading-text {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Selected info display */
+.selected-info {
+    font-size: 12px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 4px;
+    display: block;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border-left: 3px solid #000;
+}
+
+/* Address Preview Styles */
+.address-preview {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    border-left: 4px solid #000;
+}
+
+.address-preview label {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
+}
+
+.preview-text {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    flex: 1;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #333;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    flex: 1;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #e8e8e8;
+}
+
+/* Action Header */
+.action-header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-add-address {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-add-address:hover {
+    background: #333;
+}
+
+.btn-edit-selected {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-edit-selected:hover:not(:disabled) {
+    background: #000;
+}
+
+.btn-edit-selected:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.empty-state p {
+    margin: 8px 0;
+}
+
+.address-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.address-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.address-view {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    background: white;
+    gap: 12px;
+}
+
+/* Checkbox Styles */
+.address-checkbox {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+}
+
+.address-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    cursor: pointer;
+}
+
+.address-view .info {
+    flex: 1;
+    min-width: 0; /* Allow text to wrap */
+}
+
+.address-view .info strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+.address-view .info p {
+    margin: 4px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.address-view .info .full-address {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #000;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.address-view .info span {
+    color: #888;
+    font-size: 14px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-delete {
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background: #e8e8e8;
+    border-color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .address-popup {
+        padding: 0 10px;
+    }
+
+    .action-header {
+        flex-direction: column;
+    }
+
+    .address-view {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .address-checkbox {
+        align-self: flex-start;
+    }
+
+    .action-buttons {
+        justify-content: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .address-preview {
+        padding: 10px;
+    }
+
+    .preview-text {
+        font-size: 13px;
+    }
+
+    .address-view .info .full-address {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+/* Improved text wrapping for very long addresses */
+.full-address {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 480px) {
+    .address-view {
+        padding: 12px;
+    }
+
+    .address-view .info .full-address {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}

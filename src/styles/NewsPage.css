@@ -1,0 +1,300 @@
+/* News Page Styles */
+.news-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Loading & Error States */
+.news-loading,
+.news-error,
+.no-news {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.news-error p,
+.no-news p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.retry-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.retry-btn:hover {
+    background: #0056b3;
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* News Card */
+.news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* News Card Image */
+.news-card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-card-image img {
+    transform: scale(1.05);
+}
+
+.news-placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+/* News Overlay */
+.news-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+.atino-logo {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.news-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+/* News Card Content */
+.news-card-content {
+    padding: 24px;
+}
+
+.news-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.news-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+
+.news-read-more {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.news-read-more:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+/* Pagination */
+.news-pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-container {
+        padding: 0 15px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .news-card-image {
+        height: 200px;
+    }
+
+    .news-overlay {
+        padding: 15px;
+    }
+
+    .atino-logo {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .news-card-title {
+        font-size: 1rem;
+    }
+
+    .news-card-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-container {
+        padding: 0 10px;
+    }
+
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .news-card-image {
+        height: 180px;
+    }
+
+    .news-card-content {
+        padding: 16px;
+    }
+
+    .breadcrumb {
+        font-size: 12px;
+    }
+}

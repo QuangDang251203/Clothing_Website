@@ -1,0 +1,72 @@
+/* src/styles/footer.css */
+
+.atino-footer {
+    background: #f5f5f5;
+    padding: 40px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: flex-start; /* Căn hàng trên cùng */
+}
+
+.atino-footer .col {
+    flex: 1 1 200px;
+}
+
+.atino-footer h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Reset list style cho các ul trong footer */
+.atino-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Các li */
+.atino-footer li {
+    margin-bottom: 8px;
+}
+
+/* Link bên trong li */
+.atino-footer li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Khi hover, link sẽ đổi màu và dịch lên 2px */
+.atino-footer li a:hover {
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* footer copyright */
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 16px;
+}
+
+/* Responsive sửa cột footer khi màn hình nhỏ */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .atino-footer .col {
+        flex: 1 1 100%;
+        margin-bottom: 16px;
+    }
+}

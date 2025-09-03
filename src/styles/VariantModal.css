@@ -1,0 +1,110 @@
+
+    /* ===== Import Modal (nhỏ) ===== */
+.import-modal {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    padding: 1.5rem;
+    position: relative;
+}
+.import-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.import-modal .modal-header h4 {
+    font-size: 1.25rem;
+    color: #2e7d32;
+}
+.import-modal .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.import-modal .btn-exit {
+    background-color: #ef5350;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.import-modal .btn-exit:hover {
+    background-color: #e53935;
+}
+
+/* ===== History Modal (lớn) ===== */
+.history-modal {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    max-width: 95%;
+    width: 100%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.history-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #90caf9;
+}
+.history-modal .modal-header h4 {
+    font-size: 1.5rem;
+    color: #1565c0;
+}
+.history-modal .filter-row {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.history-modal .filter-row .btn-exit {
+    background-color: #ef5350;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.history-modal .filter-row .btn-exit:hover {
+    background-color: #e53935;
+}
+.history-modal .table-container {
+    flex: 1;
+    overflow-y: auto;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #90caf9;
+}
+.history-modal table thead {
+    background-color: #2196f3;
+    color: #fff;
+}
+.history-modal table tbody tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+/* ===== Backdrop chung ===== */
+.custom-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+}

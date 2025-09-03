@@ -1,0 +1,49 @@
+/* src/components/StoreLocatorEmbed.css */
+.embed-container {
+    display: flex;
+    height: calc(100vh - 80px); /* trừ header */
+}
+
+.store-sidebar {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.store-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.store-sidebar li {
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.store-sidebar li:hover,
+.store-sidebar li.active {
+    background: #f0f0f0;
+}
+
+.store-map-embed {
+    flex: 1;
+    position: relative;
+}
+
+.store-map-embed iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #666;
+    font-size: 1.2rem;
+}

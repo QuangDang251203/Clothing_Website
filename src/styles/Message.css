@@ -1,0 +1,88 @@
+.message-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-wrapper.mine {
+    justify-content: flex-end;
+}
+
+.message-wrapper.theirs {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    max-width: 75%;
+    position: relative;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.message-wrapper.mine .message-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom-right-radius: 6px;
+}
+
+.message-wrapper.theirs .message-content {
+    background: #f3f4f6;
+    color: #374151;
+    border-bottom-left-radius: 6px;
+}
+
+.message-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    padding: 0 4px;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.message-wrapper.mine .message-meta {
+    flex-direction: row-reverse;
+}
+
+.sender-name {
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.message-wrapper.mine .sender-name {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.message-time {
+    opacity: 0.7;
+}
+
+/* Hover effects */
+.message-bubble:hover .message-meta {
+    opacity: 1;
+}
+
+.message-meta {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}

@@ -1,0 +1,475 @@
+/* src/styles/checkout-form.css */
+
+/* Toàn bộ khung chứa checkout */
+.checkout-form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Tiêu đề chính */
+.checkout-form-container h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+/* ================= 1. Shipping Summary Card ================ */
+.shipping-summary-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+}
+
+.shipping-summary-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.shipping-icon {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #ee4d2d;
+}
+
+.shipping-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    flex-grow: 1;
+}
+
+.change-address-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.change-address-btn:hover {
+    text-decoration: underline;
+}
+
+.shipping-summary-info {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #555;
+}
+
+.shipping-summary-info p {
+    margin: 4px 0;
+}
+
+/* ================= 2. Order Summary Card ================ */
+.order-summary-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-line:last-child {
+    border-bottom: none;
+}
+
+.order-label {
+    font-weight: 500;
+}
+
+.order-value {
+    font-weight: 500;
+}
+
+.discount-line .order-value {
+    color: #ee4d2d;
+}
+
+/* Tổng phải trả thường được in đậm và lớn hơn */
+.final-line .order-label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.final-line .order-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ee4d2d;
+}
+
+/* ================= 3. Address List section ================ */
+.address-section {
+    margin-bottom: 16px;
+}
+
+.address-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.address-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.address-item {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: #fafafa;
+}
+
+.address-item label {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.address-item input[type="radio"] {
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.address-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.address-info p {
+    margin: 2px 0;
+}
+
+.default-badge {
+    display: inline-block;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #777;
+    padding: 2px 4px;
+    margin-left: 8px;
+}
+
+/* ================= 4. Payment Section ================ */
+.payment-section {
+    margin-bottom: 16px;
+}
+
+.payment-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.payment-item input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* ================= 5. Place Order Button ================ */
+.place-order-container {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.btn-place-order {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-place-order:hover {
+    background-color: #d43c1b;
+}
+
+.btn-place-order:disabled {
+    background-color: #f0a597;
+    cursor: not-allowed;
+}
+
+/* ================= 6. Lỗi, Loading, ... ================ */
+.error-text {
+    color: #ee4d2d;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* Nếu loading, có thể thêm lớp spinner hoặc text nhỏ */
+/* src/styles/checkout-form.css */
+
+/* Toàn bộ khung chứa checkout */
+.checkout-form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Tiêu đề chính */
+.checkout-form-container h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+/* ========= 1. Shipping Summary Card ========== */
+.shipping-summary-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+}
+
+.shipping-summary-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.shipping-icon {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #ee4d2d;
+}
+
+.shipping-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    flex-grow: 1;
+}
+
+.change-address-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.change-address-btn:hover {
+    text-decoration: underline;
+}
+
+.shipping-summary-info {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #555;
+}
+
+.shipping-summary-info p {
+    margin: 4px 0;
+}
+
+/* ========= 2. Address List Panel (sau khi bấm Thay Đổi) ========== */
+.address-list-panel {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+.address-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.address-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.address-item:last-child {
+    border-bottom: none;
+}
+
+.address-item input[type="radio"] {
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.address-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.address-info p {
+    margin: 2px 0;
+}
+
+/* Nút Thêm địa chỉ mới */
+.add-address-button {
+    padding: 12px 16px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fafafa;
+}
+
+.btn-add-new-address {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.btn-add-new-address:hover {
+    background-color: #d43c1b;
+}
+
+/* ========= 3. Order Summary Card ========== */
+.order-summary-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-line:last-child {
+    border-bottom: none;
+}
+
+.order-label {
+    font-weight: 500;
+}
+
+.order-value {
+    font-weight: 500;
+}
+
+.discount-line .order-value {
+    color: #ee4d2d;
+}
+
+/* Tổng phải trả in đậm hơn */
+.final-line .order-label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.final-line .order-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ee4d2d;
+}
+
+/* ========= 4. Payment Section ========== */
+.payment-section {
+    margin-bottom: 16px;
+}
+
+.payment-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.payment-item input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* ========= 5. Place Order Button ========== */
+.place-order-container {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.btn-place-order {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-place-order:hover {
+    background-color: #d43c1b;
+}
+
+.btn-place-order:disabled {
+    background-color: #f0a597;
+    cursor: not-allowed;
+}
+
+/* ========= 6. Lỗi và Loading ========== */
+.error-text {
+    color: #ee4d2d;
+    font-size: 14px;
+    margin: 8px 0;
+}
