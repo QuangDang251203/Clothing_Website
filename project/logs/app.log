@@ -1,0 +1,8 @@
+2025-07-11T00:00:05.732+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-11T00:00:05.748+07:00  INFO 17036 --- [clothing_store] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-11T00:00:05.751+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-07-11T00:00:05.751+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@604d0523]]
+2025-07-11T00:00:05.752+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-07-11T00:00:05.762+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-11T00:00:05.765+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-11T00:00:05.768+07:00  INFO 17036 --- [clothing_store] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
